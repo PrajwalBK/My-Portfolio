@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="pb.png">
+    <meta name="description" content="Welcome to elite.com! My name is Prajwal Khavatkopp. 
+        As a passionate full-stack web developer, I specialize in crafting dynamic and innovative digital solutions.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+       
+
+        .navbar {
+            /* background: linear-gradient(90deg, #4b6cb7, #182848); */
+            background-color: #3a4f66;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background: url('https://source.unsplash.com/900x900/?developer') center/cover no-repeat;
+            height: 100vh;
+            color: FF7F50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        .hero img {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #182848;
+            font-weight: bold;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: #FF7F50;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .about-text {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        }
+
+        @media (min-width: 768px) {
+            .about-text {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .about-text {
+                font-size: 1.8rem;
+            }
+        }
+
+        .about-img {
+            width: 200px; /* Default size for small screens */
+            height: 200px;
+        }
+
+        @media (min-width: 768px) {
+           .about-img {
+                width: 200px; /* Larger size for tablets */
+                height: 200px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .about-img {
+                width: 300px; /* Largest size for desktops */
+                height: 300px;
+             }
+         }
+        .skills .skill-item img {
+            width: 60px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        .skills .skill-item:hover img {
+            transform: scale(1.1);
+        }
+        .projects .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .projects .card img {
+            border-radius: 8px;
+        }
+        #contact form .form-control {
+            border-radius: 30px;
+        }
+       
+         /* Footer Styling */
+        .footer {
+            background-color: #222; /* Dark background */
+            color: #fff; /* White text */
+            padding: 20px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        /* Social Media Links */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between icons */
+            margin-top: 10px;
+        }
+
+        .social-link img {
+            width: 25px; /* Icon size */
+            height: 25px; /* Maintain square dimensions */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Hover effects */
+        }
+
+        .social-link img:hover {
+            transform: scale(1.2); /* Slight zoom on hover */
+            opacity: 0.8; /* Dim slightly */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .social-media {
+                    gap: 10px; /* Reduce spacing for smaller screens */
+                }
+            .social-link img {
+                width: 20px; /* Smaller icons for mobile */
+                height: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                font-size: 12px; /* Adjust text size */
+                padding: 15px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Prajwal BK</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Hi, I'm a Full Stack Web Developer.</h1>
+                <p>Crafting digital experiences for the modern web.</p>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="WebD.svg" alt="Developer Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">About Me</h2><br><br>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="photo.JPG" alt="About Me Image" class="img-fluid rounded-circle" style="width: 280px; height: 280px;">
+            </div>
+            <div class="col-md-6">
+                <p class="about-text" style="font-size: 16px; line-height: 1.5;">Hello, my name is Prajwal. I am an MCA student specialized in Computer Applications with an overall CGPA of 7.51 till now. I have scored 83.52% in my BCA examination. I have knowledge of web development technologies such as HTML, CSS, PHP, ReactJS, MERN-Stack, Git, and GitHub. Along with that, I also have knowledge of programming languages such as C, Java, and Python. I feel myself more comfortable with C and Java language.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills" class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title">Skills</h2><br><br>
+        <div class="row text-center">
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/c-programming.png" alt="C">
+                <h5>C</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/java-coffee-cup-logo.png" alt="Java">
+                <h5>Java</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML">
+                <h5>HTML</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/css3.png" alt="CSS">
+                <h5>CSS</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/php.png" alt="PHP">
+                <h5>PHP</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/microsoft-office-2019.png" alt="MS Office">
+                <h5>MS Office</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/git.png" alt="Git">
+                <h5>Git</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/material-outlined/96/github.png" alt="Github">
+                <h5>Github</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/mongodb.png" alt="MongoDB">
+                <h5>MongoDB</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/python.png" alt="Python">
+                <h5>Python</h5>
+            </div>
+            <div class="col-md-3 skill-item">
+                <img src="https://img.icons8.com/color/96/sql.png" alt="SQL">
+                <h5>SQL</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Projects</h2><br><br>
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-6 col-md-8 col-sm-12 d-flex align-items-stretch">
+                <div class="card h-100">
+                    <img src="Resturant_Project.png" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Royal Bites Restaurant Website</h5>
+                        <p class="card-text">
+                            • Developed a responsive website using HTML, 
+                            CSS, JavaScript, and PHP, enhancing user 
+                            experience and accessibility. <br>
+                            • Integrated features like online reservations, 
+                            menu display, and customer reviews. <br>
+                            • Optimized website performance, reducing load 
+                            times and increasing user engagement. <br>
+                            • Collaborated with the restaurant team for 
+                            branding consistency and content presentation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12 d-flex align-items-stretch">
+                <div class="card h-100">
+                    <img src="Login_Signup_MongoDb_Project.png" class="card-img-top" alt="Project 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Login System Development with MongoDB (PHP)</h5>
+                        <p class="card-text">
+                            • Developed a secure user login system using 
+                            MongoDB for database management and PHP 
+                            for backend integration. <br>
+                            • Implemented user authentication and 
+                            authorization with password hashing for 
+                            enhanced security. <br>
+                            • Utilized MongoDB to store and manage user 
+                            credentials efficiently, ensuring scalability and 
+                            performance. <br>
+                            • Integrated backend logic with PHP to handle 
+                            login requests, session management, and 
+                            secure data retrieval.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Certificates Section -->
+<section id="certificates" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-4">Certificates</h2><br><br>
+        <div class="row justify-content-center g-4">
+            <!-- First Row with Two Certificates -->
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="card h-100">
+                    <img src="Developer_and_Technology_Simulation.png" class="card-img-top certificate-img" alt="Certificate 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Accenture UK Developer and Technology Virtual Experience Programme on Forage - January 2025</h5>
+                        <p class="card-text">
+                            • Completed the Developer and Technology Job Simulation where I developed an end-to-end understanding of the Software Development Lifecycle. <br>
+                            • Conducted in-depth research into emerging technology trends, particularly in the field of DevOps. <br>
+                            • Created and delivered a compelling PowerPoint presentation analyzing Waterfall and Agile methodologies. <br>
+                            • Designed a custom algorithm using pseudocode and created a detailed flow diagram. <br>
+                            • Debugged a Python program by fixing syntax and logic errors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <div class="card h-100">
+                    <img src="Solutions_Architecture_Simulation.png" class="card-img-top certificate-img" alt="Certificate 2">
+                    <div class="card-body">
+                        <h5 class="card-title">AWS APAC Solutions Architecture Virtual Experience Program on Forage - January 2025</h5>
+                        <p class="card-text">
+                            • Designed a simple and scalable hosting architecture based on Elastic Beanstalk for a client experiencing growth and slow response times. <br>
+                            • Explained the architecture in plain language, ensuring client understanding and cost awareness.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row with One Certificate -->
+        <div class="row justify-content-center g-4 mt-4">
+            <div class="col-lg-6 col-md-8 col-sm-12 d-flex align-items-stretch">
+                <div class="card h-100">
+                    <img src="Cisco.png" class="card-img-top certificate-img" alt="Certificate 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Certificate in Emerging Technologies Workshop - Experimenting with REST APIs using Webex Teams</h5>
+                        <p class="card-text">
+                            • Gained proficiency in RESTful APIs for software integration. <br>
+                            • Learned to utilize Cisco Spark for Developers to execute API calls effectively. <br>
+                            • Mastered Postman to perform common REST API calls and used Python to automate Cisco Spark tasks, including building simple automation bots. <br>
+                            • Developed a comprehensive understanding of emerging technologies and their practical application in software development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Achievements Section -->
+<section id="achievements" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">Achievements</h2><br><br>
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-6 col-md-8 col-sm-12 d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="IMG_9594.JPG" class="card-img-top" alt="Project 1">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">1st in Web Design at IT FEST KLE’S BCA 
+                            College, Chikodi</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12 d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="_DSC0669.JPG" class="card-img-top" alt="Project 3">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">1st in Web Battlezone Conducted By KLE’S BCA 
+                            College, Athani</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Resume Section -->
+<section id="resume" class="py-5">
+    <!-- <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="text-center">I am a passionate developer specializing in modern web development. I aim to create user-friendly, innovative digital experiences.</p>
+    </div> -->
+    <div class="container">
+        <h2 class="section-title">Resume</h2><br><br>
+        <section class="Resume-section">
+            <iframe src="Prajwal_Khavatkopp_CV.pdf" frameborder="0" title="JagadishResume" width="100%" height="600px"></iframe>
+        </section>
+    </div>
+</section>
+
+
+<!-- contact Form -->
+<section id="contact" class="bg-light py-5">
+    <div class="container">
+        <h2 class="section-title">Contact</h2><br><br>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
+</section>
+<!-- Add Skills, Projects, Certificates, etc., using similar responsive techniques -->
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-3">
+    <div class="container text-center">
+        <p>&copy; 2025 MyPortfolio. All rights reserved.</p>
+        <div class="social-media mt-3">
+            <a href="https://github.com/PrajwalBK" target="_blank" aria-label="GitHub" class="social-link">
+                <img src="https://img.icons8.com/material-outlined/48/ffffff/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/prajwal-b-khavatkopp-89380a270/" target="_blank" aria-label="LinkedIn" class="social-link">
+                <img src="https://img.icons8.com/material-outlined/48/ffffff/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="prajwal7010@gmail.com" target="_blank" aria-label="Email" class="social-link">
+                <img src="https://img.icons8.com/material-outlined/48/ffffff/email.png" alt="Email">
+            </a>
+            <a href="https://www.instagram.com/prajwalkhavatkopp" target="_blank" aria-label="Instagram" class="social-link">
+                <img src="https://img.icons8.com/material-outlined/48/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
