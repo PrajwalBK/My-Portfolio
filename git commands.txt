@@ -1,0 +1,57 @@
+
+==================================================
+Steps to Add project to repositery
+-------------------------------------
+git init
+
+git add .
+
+git commit "enter the changes"
+
+git barnch -M main
+
+git remote add origin "url of the repositery"
+
+git push -u origin main
+========================================================
+
+
+
+=========================================================
+steps to delete the files from repositery
+------------------------------------------
+rm <file name> -> remove the file from local machine
+
+git add <file name>
+
+git commit -m "Enter the deleted files"
+
+git push origin main
+===========================================================
+
+
+
+===========================================================
+steps to Add new files into repositery
+---------------------------------------
+
+git add <new file name>
+
+git commmit -m "Enter the new Added file name"
+
+git push origin main
+============================================================
+
+
+===========================================================
+steps to Delete and Add file 
+--------------------------------
+
+rm <old file name>
+
+git add .
+
+git commit -m "Enter the deleted file name and new added file name"
+
+git push origin main
+===================================================================
